@@ -1,0 +1,42 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url "http://repo.spring.io/milestone" }
+    }
+    dependencies {
+        classpath "net.carlosgsouza:gradle-console:1.0"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.1.4.RELEASE"
+    }
+}
+
+apply plugin: 'console'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+
+group = 'org.cleanarchitecture'
+version = '0.5'
+
+repositories {
+    mavenCentral()
+    maven { url "http://repo.spring.io/milestone" }
+    mavenLocal()
+}
+
+dependencies {
+    compile 'commons-logging:commons-logging:1.1.1'
+    compile 'org.apache.commons:commons-lang3:3.0'
+
+    compile 'org.hibernate:hibernate-validator:5.2.1.Final'
+    compile 'org.hibernate:hibernate-validator-cdi:5.2.1.Final'
+    compile 'javax.el:javax.el-api:2.2.4'
+    compile 'org.glassfish.web:javax.el:2.2.4'
+
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.mockito:mockito-all:1.8.4'
+}
+
+tasks.withType(JavaCompile) {
+    sourceCompatibility = "1.7"
+    targetCompatibility = "1.7"
+}
