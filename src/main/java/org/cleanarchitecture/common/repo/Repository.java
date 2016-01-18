@@ -1,4 +1,4 @@
-package org.cleanarchitecture.common.dao;
+package org.cleanarchitecture.common.repo;
 
 import org.cleanarchitecture.common.domain.Entity;
 import org.cleanarchitecture.common.domain.Id;

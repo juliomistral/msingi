@@ -9,6 +9,13 @@ import javax.validation.ConstraintViolationException;
 import java.util.Set;
 
 public class ConstraintViolationsMatcher extends TypeSafeMatcher<ConstraintViolationException> {
+    private String propertyName;
+    private String message;
+    private String actualPropertyName;
+    private String actualMessage;
+    private ConstraintViolation violation;
+    private boolean isCheckingForViolations;
+
 
     public static ConstraintViolationsMatcher hasViolation(String propertyName, String message) {
         return new ConstraintViolationsMatcher(propertyName, message, true);
@@ -17,13 +24,6 @@ public class ConstraintViolationsMatcher extends TypeSafeMatcher<ConstraintViola
     public static ConstraintViolationsMatcher isViolationException(String message) {
         return new ConstraintViolationsMatcher(null, message, false);
     }
-
-    private String propertyName;
-    private String message;
-    private String actualPropertyName;
-    private String actualMessage;
-    private ConstraintViolation violation;
-    private boolean isCheckingForViolations;
 
     public ConstraintViolationsMatcher(String propertyName, String message, boolean isCheckingForViolations) {
         this.propertyName = propertyName;

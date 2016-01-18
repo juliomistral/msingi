@@ -13,66 +13,42 @@ import java.util.Set;
 
 public abstract class Entity<E extends Entity<E>> implements Validatable {
     private Id<E> id;
-
-    @Min(0)
-    private int version;
-
+    @Min(0) private int version;
     private Date created;
-
     private Date updated;
-
     protected Validator validator;
 
 
-    public Entity() {
+    protected Entity() {
         this.version = 0;
         this.created = new Date();
         this.updated = new Date();
         this.validator = Validation.buildDefaultValidatorFactory().getValidator();
     }
 
-    public Entity(Id<E> id, int version, Date created, Date updated) {
-        this.id = id;
-        this.version = version;
-        this.created = created;
-        this.updated = updated;
-        this.validator = Validation.buildDefaultValidatorFactory().getValidator();
-    }
+    public Id<E> getId() { return id; }
+    public int getVersion() { return version; }
+    public Date getCreated() { return created; }
+    public Date getUpdated() { return updated; }
 
-    public Entity id(final Id<E> uid) {
+    public E withId(final Id<E> uid) {
         this.id = uid;
-        return this;
+        return (E) this;
     }
 
-    public Entity created(final Date created) {
+    public E witCreated(final Date created) {
         this.created = created;
-        return this;
+        return (E) this;
     }
 
-    public Entity updated(final Date updated) {
+    public E withUpdated(final Date updated) {
         this.updated = updated;
-        return this;
+        return (E) this;
     }
 
-    public Entity version(final int version) {
+    public E withVersion(final int version) {
         this.version = version;
-        return this;
-    }
-
-    public Id<E> getId() {
-        return id;
-    }
-
-    public int getVersion() {
-        return version;
-    }
-
-    public Date getCreated() {
-        return created;
-    }
-
-    public Date getUpdated() {
-        return updated;
+        return (E) this;
     }
 
     @Override
