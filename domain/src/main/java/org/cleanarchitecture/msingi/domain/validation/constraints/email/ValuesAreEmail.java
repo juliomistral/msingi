@@ -1,4 +1,4 @@
-package org.cleanarchitecture.common.domain.validation.constraints.email;
+package org.cleanarchitecture.msingi.domain.validation.constraints.email;
 
 import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.*;

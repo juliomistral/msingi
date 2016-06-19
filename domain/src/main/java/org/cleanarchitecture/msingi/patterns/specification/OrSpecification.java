@@ -1,4 +1,4 @@
-package org.cleanarchitecture.common.patterns.specification;
+package org.cleanarchitecture.msingi.patterns.specification;
 
 public class OrSpecification<E> extends CompositeSpecification<E> {
     private Specification<E> left;

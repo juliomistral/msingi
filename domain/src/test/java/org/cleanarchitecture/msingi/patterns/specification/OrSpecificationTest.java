@@ -1,4 +1,4 @@
-package org.cleanarchitecture.common.patterns.specification;
+package org.cleanarchitecture.msingi.patterns.specification;
 
 ;
 import static org.junit.Assert.*;

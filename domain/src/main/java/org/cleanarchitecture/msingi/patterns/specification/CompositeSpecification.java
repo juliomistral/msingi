@@ -1,4 +1,4 @@
-package org.cleanarchitecture.common.patterns.specification;
+package org.cleanarchitecture.msingi.patterns.specification;
 
 public abstract class CompositeSpecification<E> implements Specification<E> {
     @Override

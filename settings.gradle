@@ -2,7 +2,7 @@
  * Detailed information about configuring a multi-project build in Gradle can be found
  * in the user guide at http://gradle.org/docs/2.5/userguide/multi_project_builds.html
  */
-rootProject.name = 'common'
+rootProject.name = 'msingi'
 
 include 'domain'
 include 'test'

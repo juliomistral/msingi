@@ -1,4 +1,4 @@
-package org.cleanarchitecture.common.domain;
+package org.cleanarchitecture.msingi.domain;
 
 import javax.validation.ConstraintViolationException;
 

@@ -1,4 +1,4 @@
-package org.cleanarchitecture.common.domain;
+package org.cleanarchitecture.msingi.domain;
 
 public class UuidId <E extends Entity<E>> implements Id<E> {
     private String uid;

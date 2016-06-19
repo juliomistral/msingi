@@ -10,7 +10,7 @@ buildscript {
 }
 
 subprojects {
-    group = 'org.cleanarchitecture'
+    group = 'org.cleanarchitecture.' + rootProject.name
     version = '0.6'
 
     apply plugin: 'java'
